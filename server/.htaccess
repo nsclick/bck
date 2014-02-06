@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond $1 !^(sitemap.xml|index.php|css|js|images|robots.txt|assets|uploads)
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+AuthType Basic
+AuthName "NSclick backup Auth"
+AuthUserFile /home/cesar/code/bck/server/.htpasswd
+Require valid-user
